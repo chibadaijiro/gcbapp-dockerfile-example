@@ -1,0 +1,8 @@
+# COPY theserver file to image from builder
+FROM alpine:latest
+WORKDIR /usr/local/bin/
+COPY gopath/bin/gcbapp-dockerfile-example .
+
+EXPOSE 8080
+
+CMD ["/usr/local/bin/gcbapp-dockerfile-example"]
